@@ -2,12 +2,16 @@ import React, { use } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { EffectCoverflow, Pagination, Autoplay } from "swiper/modules";
 import ReviewCard from "../ReviewCard/ReviewCard";
-
 const Reviews = ({ reviewsPromise }) => {
   const reviews = use(reviewsPromise);
   console.log(reviews);
   return (
-    <div>
+    <div className="mt-8">
+      <img
+        className="mx-auto block"
+        src="/src/assets/customer-top.png"
+        alt=""
+      />
       <div>
         <h3 className="font-extrabold text-secondary text-4xl text-center p-4">
           What our customers are sayings

@@ -4,7 +4,7 @@ import { FaCarAlt } from "react-icons/fa";
 const worksSection = () => {
   return (
     <div>
-      <h3 className="font-extrabold text-secondary text-4xl items-start text-left p-4">
+      <h3 className="font-extrabold text-secondary text-4xl items-start text-left p-4 font-[Urbanist]">
         How it Works
       </h3>
       <div className="flex gap-4">
@@ -12,9 +12,9 @@ const worksSection = () => {
           <div className="card-body gap-8">
             <FaCarAlt />
 
-            <h2 className="card-title">Booking Pick & Drop</h2>
+            <h2 className="card-title font-[Urbanist]">Booking Pick & Drop</h2>
 
-            <p className="medium-text">
+            <p className="medium-text font-[Urbanist]">
               From personal packages to business shipments — we deliver on time,
               every time.
             </p>
@@ -24,8 +24,8 @@ const worksSection = () => {
           <div className="card-body gap-8">
             <FaCarAlt />
 
-            <h2 className="card-title">Cash On Delivery</h2>
-            <p className="medium-text">
+            <h2 className="card-title font-[Urbanist]">Cash On Delivery</h2>
+            <p className="medium-text font-[Urbanist]">
               From personal packages to business shipments — we deliver on time,
               every time.
             </p>
@@ -35,8 +35,8 @@ const worksSection = () => {
           <div className="card-body gap-8">
             <FaCarAlt />
 
-            <h2 className="card-title">Delivery Hub</h2>
-            <p className="medium-text">
+            <h2 className="card-title font-[Urbanist]">Delivery Hub</h2>
+            <p className="medium-text font-[urbanist]">
               From personal packages to business shipments — we deliver on time,
               every time.
             </p>
@@ -46,8 +46,10 @@ const worksSection = () => {
           <div className="card-body gap-8">
             <FaCarAlt />
 
-            <h2 className="card-title">Booking SME & Corporate</h2>
-            <p className="medium-text">
+            <h2 className="card-title font-[Urbanist]">
+              Booking SME & Corporate
+            </h2>
+            <p className="medium-text font-[Urbanist]">
               From personal packages to business shipments — we deliver on time,
               every time.
             </p>

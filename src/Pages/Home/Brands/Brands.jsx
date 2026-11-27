@@ -1,6 +1,8 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import { Autoplay } from "swiper/modules";
+
 import amazon from "../../../assets/brands/amazon.png";
 import amazon_vector from "../../../assets/brands/amazon_vector.png";
 import casio from "../../../assets/brands/casio.png";
@@ -8,7 +10,7 @@ import moonstar from "../../../assets/brands/moonstar.png";
 import randstad from "../../../assets/brands/randstad.png";
 import star from "../../../assets/brands/star.png";
 import start_people from "../../../assets/brands/start_people.png";
-import { Autoplay } from "swiper/modules";
+
 const brandLogos = [
   amazon,
   amazon_vector,
@@ -21,82 +23,135 @@ const brandLogos = [
 
 const Brands = () => {
   return (
-    <div className="mt-18">
-      <h3 className="font-extrabold text-secondary text-4xl items-start">
-        We've helped thousands of sales teams
+    <div className="mt-12 lg:mt-14 xl:mt-16">
+      {/* Heading */}
+      <h3 className="font-extrabold text-secondary text-xl sm:text-2xl lg:text-3xl text-center">
+        We've helped thousands of sales teams
       </h3>
+
+      {/* Brand Slider */}
       <Swiper
         loop={true}
-        slidesPerView={4}
-        spaceBetween={30}
+        slidesPerView={2}
+        spaceBetween={20}
         grabCursor={true}
         modules={[Autoplay]}
         autoplay={{
-          delay: 1000,
+          delay: 1500,
           disableOnInteraction: false,
+        }}
+        breakpoints={{
+          480: {
+            slidesPerView: 3,
+            spaceBetween: 25,
+          },
+          640: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+          },
+          1024: {
+            slidesPerView: 5,
+            spaceBetween: 35,
+          },
+          1280: {
+            slidesPerView: 6,
+            spaceBetween: 40,
+          },
         }}
       >
         {brandLogos.map((logo, index) => (
           <SwiperSlide key={index}>
-            <img className="mt-12" src={logo} alt="" />
+            <div className="h-20 lg:h-24 xl:h-28 flex items-center justify-center px-2">
+              <img
+                src={logo}
+                alt="Brand logo"
+                className="max-w-full max-h-10 lg:max-h-12 xl:max-h-14 object-contain"
+              />
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
-      {/* card1 */}
-      <div className="card lg:card-side bg-base-200 w-270 h-80 shadow-sm mt-15 rounded-2xl">
-        <figure className="w-80 h-70 p-8">
-          <img src="/src/assets/live-tracking.png" alt="Album" />
-        </figure>
-        <div className="border-l border-dashed border-[#5B8790] h-50 mt-12"></div>
-        <div className="card-body">
-          <h3 className="font-extrabold text-4xl items-start pt-15 text-secondary">
-            Live Parcel Tracking
-          </h3>
-          <p className="text-base-300 font-medium font-[Urbanist] pt-5 pb-5 text-[16px]">
-            Stay updated in real-time with our live parcel tracking feature.
-            From pick-up to delivery, monitor your shipment's journey and get
-            instant status updates for complete peace of mind.
-          </p>
+
+      {/* Feature Cards */}
+      <div className="mt-4 lg:mt-3 space-y-3 lg:space-y-4">
+        {/* Card 1 */}
+        <div className="flex items-center bg-base-200 shadow-sm rounded-xl w-full lg:min-h-46 xl:min-h-46">
+          <figure className="w-1/3 lg:w-40 xl:w-44 shrink-0 p-2 lg:p-3 xl:p-4">
+            <img
+              src="/src/assets/live-tracking.png"
+              alt="Live Parcel Tracking"
+              className="w-full object-contain"
+            />
+          </figure>
+
+          <div className="border-l border-dashed border-[#5B8790] self-stretch my-3 lg:my-4"></div>
+
+          <div className="p-3 lg:p-4 xl:p-5 flex-1">
+            <h3 className="font-extrabold text-sm sm:text-base lg:text-xl xl:text-2xl text-secondary">
+              Live Parcel Tracking
+            </h3>
+
+            <p className="text-base-300 font-medium font-[Urbanist] mt-1 lg:mt-2 text-xs lg:text-sm xl:text-base">
+              Stay updated in real-time with our live parcel tracking feature.
+              From pick-up to delivery, monitor your shipment's journey and get
+              instant status updates for complete peace of mind.
+            </p>
+          </div>
+        </div>
+
+        {/* Card 2 */}
+        <div className="flex items-center bg-base-200 shadow-sm rounded-xl w-full lg:min-h-46 xl:min-h-46">
+          <figure className="w-1/3 lg:w-40 xl:w-44 shrink-0 p-2 lg:p-3 xl:p-4">
+            <img
+              src="/src/assets/safe-delivery.png"
+              alt="Safe Delivery"
+              className="w-full object-contain"
+            />
+          </figure>
+
+          <div className="border-l border-dashed border-[#5B8790] self-stretch my-3 lg:my-4"></div>
+
+          <div className="p-3 lg:p-4 xl:p-5 flex-1">
+            <h3 className="font-extrabold text-sm sm:text-base lg:text-xl xl:text-2xl text-secondary">
+              100% Safe Delivery
+            </h3>
+
+            <p className="text-base-300 font-medium font-[Urbanist] mt-1 lg:mt-2 text-xs lg:text-sm xl:text-base">
+              We ensure your parcels are handled with the utmost care and
+              delivered securely to their destination. Our reliable process
+              guarantees safe and damage-free delivery every time.
+            </p>
+          </div>
+        </div>
+
+        {/* Card 3 */}
+        <div className="flex items-center bg-base-200 shadow-sm rounded-xl w-full lg:min-h-46 xl:min-h-46">
+          <figure className="w-1/3 lg:w-40 xl:w-44 shrink-0 p-2 lg:p-3 xl:p-4">
+            <img
+              src="/src/assets/call-24-7-line-icon-service-2C91FKG.jpg"
+              alt="Call Center Support"
+              className="w-full object-contain"
+            />
+          </figure>
+
+          <div className="border-l border-dashed border-[#5B8790] self-stretch my-3 lg:my-4"></div>
+
+          <div className="p-3 lg:p-4 xl:p-5 flex-1">
+            <h3 className="font-extrabold text-sm sm:text-base lg:text-xl xl:text-2xl text-secondary">
+              24/7 Call Center Support
+            </h3>
+
+            <p className="text-base-300 font-medium font-[Urbanist] mt-1 lg:mt-2 text-xs lg:text-sm xl:text-base">
+              Our dedicated support team is available around the clock to assist
+              you with any questions, updates, or delivery concerns—anytime you
+              need us.
+            </p>
+          </div>
         </div>
       </div>
-      {/* card2 */}
-      <div className="card lg:card-side bg-base-200 w-270 h-80 shadow-sm mt-8 rounded-2xl">
-        <figure className="w-80 h-70 p-8">
-          <img src="/src/assets/safe-delivery.png" alt="Album" />
-        </figure>
-        <div className="border-l border-dashed border-[#5B8790] h-50 mt-12"></div>
-        <div className="card-body">
-          <h3 className="font-extrabold text-4xl items-start pt-15 text-secondary">
-            100% Safe Delivery
-          </h3>
-          <p className="text-base-300 font-medium font-[Urbanist] pt-5 pb-5 text-[16px]">
-            We ensure your parcels are handled with the utmost care and
-            delivered securely to their destination. Our reliable process
-            guarantees safe and damage-free delivery every time.
-          </p>
-        </div>
-      </div>
-      {/* card3 */}
-      <div className="card lg:card-side bg-base-200 w-270 h-80 shadow-sm mt-8 rounded-2xl">
-        <figure className="w-80 h-70 p-8">
-          <img
-            src="/src/assets/call-24-7-line-icon-service-2C91FKG.jpg"
-            alt="Album"
-          />
-        </figure>
-        <div className="border-l border-dashed border-[#5B8790] h-50 mt-12"></div>
-        <div className="card-body">
-          <h3 className="font-extrabold text-4xl items-start pt-15 text-secondary">
-            24/7 Call Center Support
-          </h3>
-          <p className="text-base-300 font-medium font-[Urbanist] pt-5 pb-5 text-[16px]">
-            Our dedicated support team is available around the clock to assist
-            you with any questions, updates, or delivery concerns—anytime you
-            need us.
-          </p>
-        </div>
-      </div>
-      <div className="border-t border-dashed border-[#5B8790] mt-20 mb-20 w-270"></div>
+
+      {/* Bottom Divider */}
+      <div className="border-t border-dashed border-[#5B8790] mt-6 lg:mt-8 mb-6 lg:mb-8 w-full"></div>
     </div>
   );
 };

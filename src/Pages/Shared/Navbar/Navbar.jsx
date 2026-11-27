@@ -5,12 +5,11 @@ import { NavLink } from "react-router";
 const Navbar = () => {
   const links = (
     <>
-    
       <li className="text-base-300 font-medium font-[Urbanist] pt-5 pb-5 text-[16px]">
         <NavLink to="">Services</NavLink>
       </li>
       <li className="text-base-300 font-medium font-[Urbanist] pt-5 pb-5 text-[16px]">
-        <NavLink to="/">About Us</NavLink>
+        <NavLink to="/about">About Us</NavLink>
       </li>
       <li className="text-base-300 font-medium font-[Urbanist] pt-5 pb-5 text-[16px]">
         <NavLink to="/coverage">Coverage</NavLink>
@@ -45,9 +44,9 @@ const Navbar = () => {
             {links}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">
-          <Logo></Logo>
-        </a>
+        <div className="btn btn-ghost text-xl">
+          <Logo />
+        </div>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{links}</ul>
@@ -56,7 +55,6 @@ const Navbar = () => {
         <a className="btn">Button</a>
       </div>
     </div>
-    
   );
 };
 

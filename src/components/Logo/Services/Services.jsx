@@ -48,8 +48,8 @@ const Services = () => {
 
       <p className="text-base-100 font-medium font-[Urbanist] pt-5 pb-5">
         Enjoy fast, reliable parcel delivery with real-time tracking and zero
-        hassle. From personal packages to business shipments — we deliver on
-        time, every time.
+        hassle. From personal packages to
+        <br /> business shipments — we deliver on time, every time.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
