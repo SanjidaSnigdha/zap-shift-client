@@ -4,8 +4,8 @@ import { FaQuoteLeft, FaStar } from "react-icons/fa";
 const ReviewCard = ({ review }) => {
   const { userName, review: testimonial, user_photoURL } = review;
   return (
-    <div className="bg-base-200 py-16 px-4">
-      <div className="card bg-base-100 shadow-sm border border-base-300 max-w-xl mx-auto rounded-2xl">
+    <div className="bg-base-100 py-16 px-4">
+      <div className="card bg-base-200 shadow-sm border border-base-300 max-w-xl mx-auto rounded-2xl">
         <div className="card-body p-8">
           {/* Quote Icon & Rating */}
           <div className="flex justify-between items-center mb-4">
@@ -34,9 +34,6 @@ const ReviewCard = ({ review }) => {
 
             <div>
               <h3 className="font-bold text-base-content">{userName}</h3>
-              <p className="text-sm text-base-content/60">
-                Senior Product Designer
-              </p>
             </div>
           </div>
         </div>

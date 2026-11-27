@@ -1,0 +1,27 @@
+import React from "react";
+import { FaSearch } from "react-icons/fa";
+
+const Coverage = () => {
+  return (
+    <div className="bg-base-200 rounded-xl">
+      <h3 className="font-extrabold text-secondary text-4xl items-start text-left p-8">
+        We are available in 64 districts
+      </h3>
+      <div className="join flex items-start px-8 pb-8">
+        <label className="join-item flex items-center gap-3 bg-bas px-4 rounded-l-lg">
+          <FaSearch className="text-gray-400" />
+
+          <input
+            className="bg-transparent border-0 outline-none focus:outline-none py-3"
+            type="text"
+            placeholder="Search here"
+          />
+        </label>
+
+        <button className="btn btn-neutral join-item">Join</button>
+      </div>
+    </div>
+  );
+};
+
+export default Coverage;
